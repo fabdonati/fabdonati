@@ -1,13 +1,15 @@
 # Fabrizio Donati
 
-Quant-oriented software engineer focused on market data, research tooling, and performance-aware systems.
+Engineering leader and quantitative modeler focused on real-time C++/Python systems, high-performance computing, mathematical modeling, nonlinear optimization, and production-grade research infrastructure.
 
-## What I'm Building
+My background spans Formula 1 simulation, biomedical modeling, and performance-critical engineering. The repositories here are a focused public portfolio around market data, backtesting, pricing, and systems-oriented tooling.
 
-- Market data utilities for cleaning, resampling, and feature generation
-- Backtesting infrastructure for small, reproducible strategy research
-- Numerical finance tools for pricing and calibration workflows
-- C++ systems projects that emphasize correctness and low-level reasoning
+## What I Work On
+
+- Real-time and performance-critical C++ / Python systems
+- High-performance computing, mathematical modeling, and nonlinear optimization
+- Research infrastructure for data, signals, and reproducible evaluation
+- Quantitative finance projects focused on market data, backtesting, pricing, and microstructure
 
 ## Selected Projects
 
@@ -38,20 +40,21 @@ Planned next layers:
 - `ibkr-live-feed`: live broker connectivity, streaming normalization, replay, and monitoring
 - `market-intel-pipeline`: structured event extraction from news, filings, and transcripts
 
-## Tech Focus
+## Core Strengths
 
-- Python for research infrastructure, numerical workflows, and developer tooling
-- C++ for systems design, performance-sensitive logic, and low-level control
-- Testing, documentation, and iterative maintenance as first-class parts of the workflow
+- Real-time C++ / Python engineering with deterministic and performance-aware design
+- High-performance computing, nonlinear optimization, numerical methods, and inference
+- Research-to-production workflows: prototyping, validation, profiling, and hardening
+- Data pipelines, signal engineering, and reproducible evaluation
 
 ## Current Direction
 
 I'm especially interested in the intersection of:
 
 - quantitative research infrastructure
-- market microstructure
-- pricing and risk tooling
-- robust, well-tested developer-facing libraries
+- high-performance and low-latency systems
+- simulation, nonlinear optimization, and model validation
+- market microstructure, pricing, and data-driven decision support
 
 ## Notes
 
