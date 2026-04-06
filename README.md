@@ -16,6 +16,28 @@ Quant-oriented software engineer focused on market data, research tooling, and p
 - [`options-pricer`](https://github.com/fabdonati/options-pricer): Black-Scholes, Greeks, implied volatility, and Monte Carlo comparisons for vanilla options
 - [`lob-engine`](https://github.com/fabdonati/lob-engine): C++20 price-time-priority limit order book with tests, replay support, and benchmark tooling
 
+## How The Repos Fit Together
+
+```text
+market-data-toolkit  ->  backtest-lab
+       |                     |
+       |                     -> strategy evaluation, portfolio simulation, reporting
+       -> historical data ingestion, normalization, feature generation
+
+options-pricer       -> standalone numerical finance / derivatives library
+lob-engine           -> standalone C++ systems / market microstructure project
+```
+
+- `market-data-toolkit` is the data foundation
+- `backtest-lab` is the research engine built to consume normalized datasets
+- `options-pricer` is intentionally independent and focused on quantitative pricing logic
+- `lob-engine` is intentionally independent and focused on matching-engine correctness and performance
+
+Planned next layers:
+
+- `ibkr-live-feed`: live broker connectivity, streaming normalization, replay, and monitoring
+- `market-intel-pipeline`: structured event extraction from news, filings, and transcripts
+
 ## Tech Focus
 
 - Python for research infrastructure, numerical workflows, and developer tooling
