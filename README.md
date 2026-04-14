@@ -2,7 +2,7 @@
 
 Engineering leader and quantitative modeler focused on real-time C++/Python systems, high-performance computing, mathematical modeling, nonlinear optimization, and production-grade research infrastructure.
 
-My background spans Formula 1 simulation, biomedical modeling, and performance-critical engineering. The repositories here are a focused public portfolio around market data, backtesting, pricing, and systems-oriented tooling.
+My background spans Formula 1 simulation, biomedical modeling, and performance-critical engineering. The repositories here cover market data, backtesting, pricing, market microstructure, and related tooling.
 
 ## What I Work On
 
@@ -18,7 +18,7 @@ My background spans Formula 1 simulation, biomedical modeling, and performance-c
 - [`options-pricer`](https://github.com/fabdonati/options-pricer): Black-Scholes, Greeks, implied volatility, and Monte Carlo comparisons for vanilla options
 - [`lob-engine`](https://github.com/fabdonati/lob-engine): C++20 price-time-priority limit order book with tests, replay support, and benchmark tooling
 
-## How The Repos Fit Together
+## Repository Structure
 
 ```text
 market-data-toolkit  ->  backtest-lab
@@ -30,10 +30,10 @@ options-pricer       -> standalone numerical finance / derivatives library
 lob-engine           -> standalone C++ systems / market microstructure project
 ```
 
-- `market-data-toolkit` is the data foundation
-- `backtest-lab` is the research engine built to consume normalized datasets
-- `options-pricer` is intentionally independent and focused on quantitative pricing logic
-- `lob-engine` is intentionally independent and focused on matching-engine correctness and performance
+- `market-data-toolkit` handles ingestion, normalization, and feature generation for historical datasets
+- `backtest-lab` consumes normalized datasets for deterministic strategy evaluation
+- `options-pricer` is a standalone numerical library for option pricing and diagnostics
+- `lob-engine` is a standalone C++ project for order-book matching and workload measurement
 
 ## Run The Full Showcase
 
@@ -49,20 +49,15 @@ It generates a fixture-driven portfolio demo across the repos and writes the con
 showcase/output/index.md
 ```
 
-That run produces:
+The run produces:
 
-- market-data ingestion, validation, and feature artifacts
-- document-intelligence extraction artifacts
-- backtest metrics, curves, and chart artifacts
-- pricing comparison, sweep, and Monte Carlo diagnostics artifacts
-- order-book replay and benchmark artifacts
+- market-data ingestion, validation, and feature outputs
+- document-ingestion and event-extraction outputs
+- backtest metrics, curves, and chart outputs
+- pricing comparison, sweep, and Monte Carlo diagnostics outputs
+- order-book replay and benchmark outputs
 
-The orchestration layer is intentionally thin. The repos stay modular; this entrypoint just turns them into one inspectable narrative.
-
-Planned next layers:
-
-- `ibkr-live-feed`: live broker connectivity, streaming normalization, replay, and monitoring
-- `market-intel-pipeline`: structured event extraction from news, filings, and transcripts
+The orchestration layer is thin by design. The individual repos remain independent; this entrypoint runs a consistent fixture-driven demo across them.
 
 ## Core Strengths
 
@@ -71,15 +66,11 @@ Planned next layers:
 - Research-to-production workflows: prototyping, validation, profiling, and hardening
 - Data pipelines, signal engineering, and reproducible evaluation
 
-## Current Direction
+## Focus Areas
 
-I'm especially interested in the intersection of:
+Current focus areas:
 
 - quantitative research infrastructure
 - high-performance and low-latency systems
 - simulation, nonlinear optimization, and model validation
 - market microstructure, pricing, and data-driven decision support
-
-## Notes
-
-Most of the repositories here are small by design. The goal is to keep them readable, well-scoped, and easy to evaluate quickly while still showing real engineering depth.
