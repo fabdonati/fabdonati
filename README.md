@@ -35,6 +35,30 @@ lob-engine           -> standalone C++ systems / market microstructure project
 - `options-pricer` is intentionally independent and focused on quantitative pricing logic
 - `lob-engine` is intentionally independent and focused on matching-engine correctness and performance
 
+## Run The Full Showcase
+
+There is now a single orchestration entrypoint in this repo:
+
+```bash
+./showcase/run_showcase.sh
+```
+
+It generates a fixture-driven portfolio demo across the repos and writes the consolidated output to:
+
+```text
+showcase/output/index.md
+```
+
+That run produces:
+
+- market-data ingestion, validation, and feature artifacts
+- document-intelligence extraction artifacts
+- backtest metrics, curves, and chart artifacts
+- pricing comparison, sweep, and Monte Carlo diagnostics artifacts
+- order-book replay and benchmark artifacts
+
+The orchestration layer is intentionally thin. The repos stay modular; this entrypoint just turns them into one inspectable narrative.
+
 Planned next layers:
 
 - `ibkr-live-feed`: live broker connectivity, streaming normalization, replay, and monitoring
